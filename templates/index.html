@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic meta information -->
+    <meta charset="UTF-8" />
+    <title>Comics World | Ecommerce website</title>
+
+    <!-- Bootstrap CSS for styling -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- jQuery and Popper.js for Bootstrap's JavaScript plugins -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-red">
+      <div class="container">
+        <a class="navbar-brand" href="{{url_for('home')}}">Comics World</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('home')}}"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('products')}}">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('contact')}}">Contact</a>
+            </li>
+          </ul>
+          <!-- Search form -->
+          <form class="form-inline my-2 my-lg-0" method="post" action="/submit">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search by Name, Author, Category..."
+              name="ser"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Read a new story Everyday!</h1>
+          <p>
+            Success isn't always about greatness. Its about consistency.
+            Consistent hardwork gains success. Greatness will come.
+          </p>
+          <a href="{{url_for('Addproduct')}}" class="btn btn-primary"
+            >Seller &#10148;</a
+          >
+        </div>
+        <div class="col-md-6">
+          <img
+            src="static/images/avengers.png"
+            alt="Avengers"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+
+    <h3 class="title">Featured Comics</h3>
+    <!-- Featured Comics -->
+
+    <div class="img-container">
+      <img
+        src="static/images/captain.jpeg"
+        alt="Captain America"
+        class="img-fluid-item"
+      />
+
+      <img src="static/images/thor.jpeg" alt="Thor" class="img-fluid-item" />
+
+      <img
+        src="static/images/spiderman.jpg"
+        alt="Spiderman"
+        class="img-fluid-item"
+      />
+      <img
+        src="static/images/ironman.jpg"
+        alt="ironman"
+        class="img-fluid-item"
+      />
+    </div>
+
+    <!-- Product Listings -->
+    <div class="img-container">
+      <div class="img-item">
+        <img
+          src="static/images/venom.jpg"
+          alt="Venom 4"
+          class="img-fluid-item"
+        />
+        <h4>Venom 4</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs 250.00</p>
+      </div>
+      <div class="img-item">
+        <img
+          src="static/images/superman.jpeg"
+          alt="Superman Red Son"
+          class="img-fluid-item"
+        />
+        <h4>Superman Red Son</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs.100.00</p>
+      </div>
+      <div class="img-item">
+        <img src="static/images/Wanda.jpg" alt="Wanda" class="img-fluid-item" />
+        <h4>Wanda</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs.300.00</p>
+      </div>
+
+      <div class="img-item">
+        <img
+          src="static/images/captain_america.jpeg"
+          alt="Captain America"
+          class="img-fluid-item"
+        />
+        <h4>Captain America</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs.400.00</p>
+      </div>
+    </div>
+  </body>
+</html>

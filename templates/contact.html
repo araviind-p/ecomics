@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <style>
+      .container-contact {
+        width: 50%;
+        padding: 20px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      .button {
+        margin-left: 7%;
+        margin-top: 2%;
+      }
+
+      label {
+        margin-top: 10px;
+      }
+
+      input[type='text'],
+      input[type='email'],
+      textarea {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      input[type='submit'] {
+        background-color: #02201bb1;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 30px;
+      }
+
+      input[type='submit']:hover {
+        background-color: #51baa7;
+      }
+
+      .parent {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .home_button {
+        margin-left: 60px;
+      }
+
+      .c:hover {
+        transform: translateY(-5px);
+        color: #000;
+      }
+    </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <a href="{{url_for('home')}}" class="button"
+      >HOME <i class="fa fa-home"></i
+    ></a>
+
+    <center>
+      <div class="container-contact">
+        <h1>Contact Us</h1>
+        <form>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name.."
+            required
+          />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email.."
+            required
+          />
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject.."
+            required
+          />
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write something.."
+            required
+          ></textarea>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </center>
+
+    <br />
+
+    <center>
+      <pre>Anand<a href="tel:+919207650976">+919207650976</a></pre>
+    </center>
+  </body>
+</html>
